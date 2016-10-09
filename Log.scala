@@ -1,3 +1,5 @@
+/*todo: scaladoc*/
+
 package scalaLogit
 
 import org.joda.time.DateTime
@@ -8,10 +10,10 @@ import scalaLogit.Log.LogMode.LoggingMode
   */
 object Log {
 
-  private val STD_OUT: Boolean = true // todo LogOptions.isStdOut
-  private val FILE_OUT: Boolean = false // todo LogOptions.isFileOut
-  private val MQ_OUT: Boolean = false // todo LogOptions.isMqOut
-  private val DB_OUT: Boolean = false // todo LogOptions.isDbOut
+  private val STD_OUT: Boolean = true // todo: LogOptions.isStdOut
+  private val FILE_OUT: Boolean = false // todo: LogOptions.isFileOut
+  private val MQ_OUT: Boolean = false // todo: LogOptions.isMqOut
+  private val DB_OUT: Boolean = false // todo: LogOptions.isDbOut
   private val DATE_TIME_FORMAT_STRING: String = "dd.MM.Y HH:mm:ss:SSS:Z"
 
 
@@ -68,9 +70,9 @@ object Log {
       if (mode == LogMode.FULL) { stdOut(logType, s"$dateTime : $pkgName : $fileName : $name : $defName : line $lineNumber - ", text) }
       else { stdOut(logType, s"$fileName : line $lineNumber - ", text) }
     }
-    if (FILE_OUT) { /*todo*/ }
-    if (MQ_OUT) { /*todo*/ }
-    if (DB_OUT) { /*todo*/ }
+    if (FILE_OUT) { /*todo: if (FILE_OUT)*/ }
+    if (MQ_OUT) { /*todo: if (MQ_OUT)*/ }
+    if (DB_OUT) { /*todo: if (DB_OUT)*/ }
   }
 
   private def stdOut(logType: String, systemStr: String, text: String): Unit = {
